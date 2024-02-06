@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo Time Bomb</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6">
+          <h1>Tokyo Time Bomb</h1>
+        </div>
+        <div class="col-md-6">
+          <nav>
+            <ul class="nav justify-content-end">
+              <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#instructions">Instructions</a></li>
+              <li class="nav-item"><a class="nav-link" href="#timer">Timer</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2>About</h2>
+        <p>This is a virtual time bomb set in Tokyo. Your mission is to defuse the bomb by entering the correct 5-digit code.</p>
+      </div>
+    </section>
+
+    <section id="instructions" class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2>Instructions</h2>
+        <p>Enter the 5-digit code below to defuse the bomb before it explodes!</p>
+        <p>You have only 3 attempts to bypass the code.</p>
+        <p>1 minute will be diducted from time for each incorrect attempt.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="bomb-container">
+              <div class="bomb">
+                <img src="https://raw.githubusercontent.com/Cadavanaugh/Bomb-O-Clock/master/src/images/timer-bomb.webp" alt="Bomb Timer" class="bomb-img">
+                <div class="sevenSeg">
+                  <p id="timerDigits">00:05:00</p>
+                  
+                </div>
+                <button type="button" id="startButton" class="btn btn-primary mb-3">Start Timer</button>
+                <div class="reflex"></div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-6" id="right-col" style="display: flex;">
+            
+            <form id="codeForm" class="d-flex flex-column">
+              
+              
+              <div class="numpad">
+                <div class="row">
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">1</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">2</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">3</button></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">4</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">5</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">6</button></div>
+                </div>
+                <div class="row">
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">7</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">8</button></div>
+                  <div class="col-4"><button type="button" class="btn btn-primary btn-block">9</button></div>
+                </div>
+                <div class="row">
+                  <div class="col-12"><button type="button" class="btn btn-primary btn-block">0</button></div>
+                </div>
+              </div>
+              <div class="row" style="margin-right: 0px;">
+              <input type="text" id="codeInput" class="form-control mb-3" maxlength="10">
+              <button type="submit" id="defuseButton" class="btn btn-success  mb-3">Defuse</button>
+                </div>
+              <p id="result" class="mt-3"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+      <p>Contact information goes here</p>
+    </div>
+  </footer> -->
+
+  <audio id="explosionAudio" src="explosion.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

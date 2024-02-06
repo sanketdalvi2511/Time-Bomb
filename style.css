@@ -1,0 +1,186 @@
+/* Basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    animation: fadeAnimation 5s infinite;
+    color: #fff;
+    }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #result {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Bomb timer styling */
+  @font-face {
+    font-family: sevenSegment;
+    src: url('../fonts/seven_segment/Seven Segment.ttf');
+  }
+  
+  .bomb-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .bomb {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bomb-img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .sevenSeg {
+    position: absolute;
+    top: 30%; /* Adjusted position from the top */
+    left: 26%; /* Adjusted position from the left */
+    width: 26%; /* Adjusted width */
+    height: 12%; /* Adjusted height */
+    background-color: black;
+    border-radius: 4px;
+    z-index: 2;
+  }
+  
+  .sevenSeg p {
+    font-size: 26px;
+    margin: 0;
+    margin-top: 3%;
+    letter-spacing: 4px;
+    color: #68fcfe;
+    font-style: italic;
+    font-family: sevenSegment;
+    font-weight: bold;
+    position: relative;
+    right: 1.5%;
+    text-shadow: 0px 0px 8px #68fcfe;
+    user-select: none;
+  }
+  
+  @-moz-document url-prefix() {
+    .sevenSeg p {
+      letter-spacing: 3px;
+    }
+  }
+  
+  .reflex {
+    clip-path: polygon(0 0, 63% 0, 42% 99%, 0% 100%);
+    z-index: 1;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(102,102,102,0.5) 100%);
+  }
+  
+  /* NumPad */
+  .numpad {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 20px;
+  }
+  
+  .numpad button {
+    padding: 10px 20px;
+    margin: 5px 0;
+  }
+  
+  .numpad .last {
+    margin-bottom: 10px;
+  }
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-45deg, #3498db 50%, #e74c3c 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
