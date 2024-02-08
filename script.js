@@ -6,7 +6,7 @@ const defuseButton = document.getElementById('defuseButton');
 const result = document.getElementById('result');
 const explosionAudio = document.getElementById('explosionAudio');
 
-let countdownTime = 5 * 60; // 5 minutes in seconds
+let countdownTime = 11 * 60; // 5 minutes in seconds
 let interval;
 let attempts = 3;
 
@@ -60,7 +60,6 @@ function handleFormSubmit(event) {
     window.location.replace('saved.html');
   } else {
     attempts--;
-    countdownTime=countdownTime-60;
     if (attempts === 0) {
       result.innerText = 'Out of attempts! Boom! Time\'s up.';
       clearInterval(interval);
