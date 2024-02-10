@@ -51,7 +51,7 @@ function startCountdown() {
 function handleFormSubmit(event) {
   event.preventDefault();
   const code = codeInput.value.trim();
-  if (code === '90634') { // Change this to your desired code
+  if (code === '31469') { // Change this to your desired code
     result.innerText = 'Bomb defused! Tokyo is safe.';
     clearInterval(interval);
     codeInput.disabled = true;
