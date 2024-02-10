@@ -6,7 +6,7 @@ const defuseButton = document.getElementById('defuseButton');
 const result = document.getElementById('result');
 const explosionAudio = document.getElementById('explosionAudio');
 
-let countdownTime = 11 * 60; // 5 minutes in seconds
+let countdownTime = 10 * 60; // 5 minutes in seconds
 let interval;
 let attempts = 3;
 
